@@ -9,6 +9,17 @@ if (!score) {
 }
 updateScoreElement();
 
+document.querySelector(".js-rock-button").addEventListener("click", () => {
+  playGame("Rock");
+});
+
+document.querySelector(".js-paper-button").addEventListener("click",() => {
+  playGame("Paper");
+});
+document.querySelector(".js-scissors-button").addEventListener("click",() => {
+  playGame("Scissors");
+});
+
 function playGame(playerMove) {
   const computerMove = pickComputerMove();
   let result = "";
